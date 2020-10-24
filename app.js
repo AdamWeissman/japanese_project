@@ -1,4 +1,4 @@
 testingThing = document.getElementById('TEST')
 testingThing.addEventListener('click', () => {
-  alert("it worked")
+  testingThing.innerHTML = sample_arr['Phrases'][0][0]
 })
