@@ -1,20 +1,21 @@
-thePrompt = document.getElementById('thePrompt')
+thePrompt = document.getElementById('thePrompt') // top prompt or root value of node
+inputMessage = document.getElementById('inputMessage') // for error messages etc
+
+t2 = document.getElementById('t2')
+
 
 function setThePrompt(withThisMessage) {
   thePrompt.innerHTML = withThisMessage
 }
 
-inputMessage = document.getElementById('inputMessage')
-
 function setInputMessage(withThisMessage) {
   inputMessage.innerHTML = withThisMessage
 }
 
-userInputForm = document.getElementById('userInputSlot')
-
 function submitUserInput() {
   let thang = document.getElementById('userActualInput').value;
   console.log("this worked: ", thang);
+  t2.userActualInput="huh"
 }
 
 
