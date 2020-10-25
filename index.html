@@ -12,8 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-    <script type="text/javascript" src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css" />
+    
+    
     <script type="text/javascript" src="japaneseNodes.js" defer></script>
+    <script type="text/javascript" src="app.js" defer></script>
+  
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -21,9 +25,15 @@
     <![endif]-->
     <br><br>
     <center>
-    <button id="TEST">
-      <h1>TEST HERE</h1>
-    </button>
+
+
+    <h3 id="thePrompt">  </h3>  
+
+    <form id="userInputSlot">
+      <input name="userInput" type="text" placeholder="type your response here" id="userActualInput">
+      <input type="submit" value="RESPOND">
+    </form><br>
+
     </center>
 
     <script src="" async defer></script>
