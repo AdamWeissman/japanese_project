@@ -18,7 +18,6 @@ function showSuccess(input) {
 
 // Check userResponse is not null
 function checkUserResponseNotEmpty(input) {
-  //const reForEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (input.value.length > 0 ) {
     showSuccess(input);
   } else {
@@ -27,7 +26,13 @@ function checkUserResponseNotEmpty(input) {
 }
 
 // check user response matches something in node Array
-
+function properResponse(input) {
+  if (input.value == testing[0].val) {
+    showSuccess(input);
+  } else {
+    showError(input, 'WRONG-O');
+  }
+}
 
 
 
@@ -35,6 +40,7 @@ function checkUserResponseNotEmpty(input) {
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  checkUserResponseNotEmpty(userResponse);
+  //checkUserResponseNotEmpty(userResponse);
+  properResponse(userResponse);
 
 });

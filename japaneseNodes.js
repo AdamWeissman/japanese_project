@@ -6,7 +6,7 @@ class TreeNode {
   }
 }
 
-const root = new TreeNode("How are you? ");
+const root = new TreeNode("How are you?");
 root.left = new TreeNode(["I'm good.", "I'm great!", "I'm wonderful!"]) // this would give a random response
 root.right = new TreeNode("I'm terrible.")
 root.left.left = new TreeNode("That's great to hear.")
