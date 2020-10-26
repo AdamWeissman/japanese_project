@@ -16,18 +16,9 @@ function showSuccess(input) {
   formControl.className = 'form-control success';
 }
 
-// Check userResponse is not null
-function checkUserResponseNotEmpty(input) {
-  if (input.value.length > 0 ) {
-    showSuccess(input);
-  } else {
-    showError(input, 'YOU GOTTA ENTER SOMETHING!!!');
-  }
-}
-
 // check user response matches something in node Array
 function properResponse(input) {
-  if (input.value == testing[0].val) {
+  if (input.value == jNodes[0].val) {
     showSuccess(input);
   } else {
     showError(input, 'WRONG-O');
@@ -40,7 +31,13 @@ function properResponse(input) {
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  //checkUserResponseNotEmpty(userResponse);
-  properResponse(userResponse);
+  properResponse(userResponse)
+  prompt.innerText = "HELLO"
 
 });
+
+prompt.addEventListener('change', function(e) {
+  e.preventDefault()
+
+  console.log("I was triggered")
+})
