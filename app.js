@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const prompt = document.getElementById('prompt')
+const thePrompt = document.getElementById('prompt')
 const userResponse = document.getElementById('userResponse');
 
 // Show input error message
@@ -18,26 +18,19 @@ function showSuccess(input) {
 
 // check user response matches something in node Array
 function properResponse(input) {
-  if (input.value == jNodes[0].val) {
+  if (input.value == jNodes[1].val[0]) {
     showSuccess(input);
+    thePrompt.innerHTML = jNodes[2].val
   } else {
     showError(input, 'WRONG-O');
   }
 }
 
-
+thePrompt.innerText = jNodes[0].val
 
 // Event listeners
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
   properResponse(userResponse)
-  prompt.innerText = "HELLO"
-
 });
-
-prompt.addEventListener('change', function(e) {
-  e.preventDefault()
-
-  console.log("I was triggered")
-})
