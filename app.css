@@ -3,12 +3,68 @@
   --error-color: #e74c3c;
 }
 
+
+@keyframes shadow-pulse2
+  {
+    50% {
+      box-shadow: 0 0px 89px 0px rgba(255, 32, 32, 0.5), inset 0px 0px 55px 0px rgba(255, 129, 167, 0.5);
+    }
+  }
+
+  .wrapper-frame {
+    background-color: #e4c3dd;
+    /*background-image: linear-gradient(to bottom right, #E4D8C3, #BEAD88);*/
+    -moz-box-shadow: 0px 5px 55px 0px rgba(229, 190, 223, 0.5);
+    -webkit-box-shadow: 0px 5px 55px 0px rgba(229, 190, 228, 0.5);
+    box-shadow: 0px 5px 55px 0px rgba(229, 190, 228, 0.8), inset 0px 0px 55px 0px rgba(246, 226, 242, 0.5);
+    margin: 55px auto;
+    max-width: 960px;
+    padding: 2.25%; /* 18px / 800px */
+    width: 95%;
+    animation: shadow-pulse2 4s infinite;
+  }
+
+  .body-frame {
+    background-color: #e4c3dd;
+    /*background-image: linear-gradient(to bottom right, #E4D8C3, #BEAD88);*/
+    -moz-box-shadow: 0px 5px 55px 0px rgba(255, 175, 243, 0.5);
+    -webkit-box-shadow: 0px 5px 55px 0px rgba(255, 179, 252, 0.5);
+    box-shadow: 0px 5px 55px 0px rgba(255, 236, 254, 0.8), inset 0px 0px 55px 0px rgba(251, 146, 230, 0.5);
+    /* margin: 55px auto;
+    max-width: 960px;
+    padding: 2.25%; /* 18px / 800px */
+    /* width: 95%; */
+    animation: shadow-pulse2 6s infinite;
+  }
+
+
+
+  
+.glowsmall {
+  color: #ffffff;
+  text-align: center;
+  -webkit-animation: glowsmall 4s ease-in-out infinite alternate;
+  -moz-animation: glowsmall 4s ease-in-out infinite alternate;
+  animation: glowsmall 4s ease-in-out infinite alternate;
+ }
+
+ @-webkit-keyframes glowsmall {
+  from {
+    text-shadow: 0 0 21px #ff81bc, 0 0 13px #e944d3, 0 0 21px #eea1fa, 0 0 34px #e0b9e6, 0 0 21px #e877d9, 0 0 13px #b382b7, 0 0 21px #8f648e;
+  }
+
+  to {
+    text-shadow: 0 0 34px #EFE9E2, 0 0 21px #E5DCD2, 0 0 34px #E6D7B9, 0 0 21px #D6C5A1, 0 0 34px #B7A782, 0 0 34px #8F8264, 0 0 13px #F9F5F1;
+  }
+ }
+
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f9fafb;
+  background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
@@ -18,10 +74,11 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #ffe8fa;
+  ;
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  box-shadow: 0 2px 10px rgba(223,177,182,1.00);
+  width: 700px;
 }
 
 h2 {
@@ -81,8 +138,8 @@ h2 {
 
 .form button {
   cursor: pointer;
-  background-color: #3498db;
-  border: 2px solid #3498db;
+  background-color: #ed9fe4;
+  border: 2px solid #f251cc;
   border-radius: 4px;
   color: #fff;
   display: block;
